@@ -17,8 +17,9 @@ node('master') {
                 node('master') {
                     checkout scm
                     try {
-                        docker.image("openjdk:${javaVersion}").inside {
-                            timeout(45) {
+                        # docker.image("openjdk:${javaVersion}").inside {
+                        #  docker.image("openjdk:8").inside {
+                         #   timeout(45) {
                                 sh "./gradlew -Si ${plugin}:check ${plugin}:gradleTest ${plugin}:assemble"
                             }
                         }
