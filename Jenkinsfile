@@ -22,7 +22,7 @@ node('master') {
                            timeout(45) {
                                 sh "./gradlew -Si ${plugin}:check ${plugin}:gradleTest ${plugin}:assemble"
                             }
-                        }
+                       // }
                     }
                     finally {
                         junit '**/build/test-results/**/*.xml'
