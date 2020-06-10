@@ -5,7 +5,7 @@ node('master') {
     checkout scm
 
     stage 'Build and test'
-    List<String> javas = ['7', '8']
+    List<String> javas = ['8']
     List<String> plugins = ['base', 'war', 'jar']
     Map parallelSteps = [:]
 
