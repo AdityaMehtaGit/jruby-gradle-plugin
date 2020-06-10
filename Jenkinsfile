@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-node('docker') {
+node('master') {
     stage 'Checkout source'
     checkout scm
 
