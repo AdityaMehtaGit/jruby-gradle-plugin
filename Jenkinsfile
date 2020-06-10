@@ -14,7 +14,7 @@ node('master') {
             def javaVersion = "${javas.get(j)}-jdk"
             def plugin = "jruby-gradle-${plugins.get(i)}-plugin"
             parallelSteps["${javaVersion}-${plugin}"] = {
-                node('docker') {
+                node('master') {
                     checkout scm
                     try {
                         docker.image("openjdk:${javaVersion}").inside {
